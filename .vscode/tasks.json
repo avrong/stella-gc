@@ -1,0 +1,32 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: clang build & debug",
+            "command": "/usr/bin/clang",
+            "args": [
+                "-fcolor-diagnostics",
+                "-fansi-escape-codes",
+                // "-fsaniztize=address",
+                "-g",
+                "stella/gc.c",
+                "stella/runtime.c",
+                "example.c",
+                "-o",
+                "${workspaceFolder}/example"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "console": "integratedTerminal"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "version": "2.0.0"
+}
